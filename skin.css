@@ -327,6 +327,11 @@ a.altButton:hover {
     padding: 36px 0 0;
 }
 
+#header-login {
+      padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 #site-logo {
     padding-bottom: 0;
 }
@@ -399,6 +404,7 @@ a.altButton:hover {
     margin-top: 0;
  }
 
+
 .navbar {
     margin: 30px 0 20px;
     position: relative;
@@ -410,6 +416,11 @@ a.altButton:hover {
   background-color: #e7e7e7;
   border-color: #e7e7e7;
 }
+
+.navbar-static-top {
+    margin-top: 0;
+}
+
 
 @media (max-width: 768px) {
     .navbar-desktop {
@@ -541,3 +552,6 @@ body {
   background-color: #f5f5f5;
 }
 
+#copyright-entry {
+text-align: right;
+}

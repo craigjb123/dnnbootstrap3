@@ -26,6 +26,9 @@
 <%@ Register TagPrefix="dnn" TagName="BREADCRUMB" Src="~/Admin/Skins/BreadCrumb.ascx" %>
 <!-- The Default Breadcrumb Control - Docs At :http://www.10poundgorilla.com/DNN/Skinning-Tool#Breadcrumb --> 
 
+<%@ Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" %>
+
+
 <!-- Get the Skin Path -->
 <!-- <img src="<%# SkinPath %>images/logo.png" /> -->
 
@@ -71,7 +74,12 @@
         </div>
         <div id="topnav" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <dnn:MENU ID="MENU3" MenuStyle="bootstrapNav" runat="server" IncludeNodes="My Profile"></dnn:MENU>
+             <dnn:MENU ID="MENU3" MenuStyle="bootstrapNav" runat="server" IncludeNodes="My Profile"></dnn:MENU>
+            <ul class="nav navbar-nav">
+                <li id="header-login">
+                 <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
+                </li>
+            </ul>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

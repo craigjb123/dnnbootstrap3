@@ -11,15 +11,16 @@
 <!-- Adds a Log in/Log out Contorl -->
 
                         <div id="copyright" class="row">
-                          <div class="col-md-6">
-				            <dnn:COPYRIGHT ID="dnnCopyright" runat="server" CssClass="pull-left" /> | Design by <a href="http://www.clarity-ventures.com" target="_blank">Clarity Ventures.</a>
-                          </div>
-				            <div class="col-md-6">
+
+				            <div class="col-md-6" id="links-entry">
 					            <dnn:LINKTOMOBILE ID="dnnLinkToMobile" runat="server" />
 					            <dnn:TERMS ID="dnnTerms" runat="server" /> |
 					            <dnn:PRIVACY ID="dnnPrivacy" runat="server" /> |
                                 <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
 				            </div>
+                          <div class="col-md-6" id="copyright-entry">
+				            <dnn:COPYRIGHT ID="dnnCopyright" runat="server" /> | Website Design by <a href="http://www.clarity-ventures.com" target="_blank">Clarity Ventures.</a>
+                          </div>
                         </div>
                     </div>
                 </div>

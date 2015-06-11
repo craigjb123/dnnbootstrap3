@@ -64,6 +64,19 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<nav class="navbar navbar-default navbar-static-top navbar-desktop">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Clarity Ventures DNN Skin</a>
+        </div>
+        <div id="topnav" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <dnn:MENU ID="MENU3" MenuStyle="bootstrapNav" runat="server" IncludeNodes="My Profile"></dnn:MENU>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
 <div id="siteWrapper">
    <div id="header">
        <div class="container">
@@ -78,12 +91,12 @@
                 </button>
               </div>
               <div id="navbar" class="navbar-collapse collapse">
-                  <dnn:MENU ID="MENU2" MenuStyle="bootstrapNav" runat="server"></dnn:MENU>
+                  <dnn:MENU ID="MENU2" MenuStyle="bootstrapMobileNav" runat="server" ></dnn:MENU>
               </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
           </nav>
 
-          <div class="row">
+          <div class="row" id="site-logo">
             <div class="brand col-md-6">
                 <dnn:LOGO runat="server" id="dnnLOGO" />
             </div>
@@ -94,10 +107,20 @@
             <nav class="navbar navbar-default navbar-desktop">
             <div class="container-fluid">
                 <div id="navbar">
-                    <dnn:MENU ID="MENU1" MenuStyle="bootstrapNav" runat="server"></dnn:MENU>
+                    <dnn:MENU ID="MENU1" ExcludeNodes="My Profile" MenuStyle="bootstrapNav" runat="server"></dnn:MENU>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
             </nav>
         </div>
     </div>
-</div>
+<div id="contentWrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+    	        <ol id="breadcrumb" class="breadcrumb">
+                    <li><a href="/">Home</a> / </li>
+                    <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator=" / " HideWithNoBreadCrumb="false" />
+    	        </ol>
+            </div>
+        </div>
+

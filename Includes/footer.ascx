@@ -28,11 +28,6 @@
     </div>
 </footer>
 
-<dnn:DnnJsInclude ID="DnnJsInclude1" runat="server" FilePath="js/custom.js" PathNameAlias="SkinPath" AddTag="false" />
+<dnn:DnnJsInclude ID="DnnJsInclude" runat="server" FilePath="js/custom.js" PathNameAlias="SkinPath" AddTag="false" />
 <dnn:DnnJsInclude ID="dttg" runat="server" FilePath="js/doubletaptogo.min.js" PathNameAlias="SkinPath" AddTag="false" />
 
-<script type="text/javascript">
-     $(function () {
-          $('#navdttg li:has(ul)').doubleTapToGo();
-     });
-</script>

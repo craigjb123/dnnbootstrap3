@@ -1,21 +1,13 @@
 <%@ Control language="c#" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
-
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
-
 <%@ Register TagPrefix="dnn" TagName="HEADER" Src="includes/header.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="Footer" Src="includes/footer.ascx" %>
 
-<%@ Register TagPrefix="dnn" TagName="BREADCRUMB" Src="~/Admin/Skins/BreadCrumb.ascx" %>
-
 <dnn:HEADER ID="uxHeader" runat="server" SkinPath="<%# SkinPath %>"  />
- 
-    <div id="contentWrapper">
-        <div class="container">
             <div class="row">
-    	        <ol id="breadcrumb" class="breadcrumb col-md-12">
-                    <li>Home / </li>
-                    <dnn:BREADCRUMB ID="dnnBreadcrumb" runat="server" CssClass="breadcrumbLink" RootLevel="0" Separator="/" HideWithNoBreadCrumb="false" />
-    	        </ol>
+                <div class="col-md-12">
+                    <h1><%= Server.HtmlEncode(PortalSettings.ActiveTab.Title) %></h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-7">
@@ -26,7 +18,10 @@
                 </div>
             </div>
        </div>
-        <div id="footer">
+       <div id="footer">
             <footer class="footer">
                 <div class="container">
-                <dnn:FOOTER ID="uxFooter" runat="server" SkinPath="<%# SkinPath %>"  />
+
+<dnn:FOOTER ID="uxFooter" runat="server" SkinPath="<%# SkinPath %>"  />
+
+</div>

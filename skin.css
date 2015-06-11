@@ -15,9 +15,21 @@ body, th, td, table, h1, h2, h3, h4, h5, h6,
 .Head, .SubHead, .SubSubHead,
 .Normal, .NormalBold, .NormalRed, .NormalTextBox, .NormalDisabled,
 a:link, a:visited, a:hover, input, .CommandButton {
+    font-family: 'Segoe UI',Tahoma,Arial,Helvetica,sans-serif
 }
 
+.Normal, .NormalBold, .NormalRed, .NormalTextBox, .NormalDisabled {
+font-size: 16px; line-height: 22px;
+}
 
+h1 {
+    margin: 0;
+    font-family: 'Segoe UI Light', 'Tahoma Light', 'Arial Light', 'Helvetica Light', sans-serif;
+}
+
+h2 {
+    font-size: 26px;
+}
 
 /* DNN Specific Selectors 
 -------------------------------------*/
@@ -82,6 +94,14 @@ body .jspContainer {
 body .dnn_mact > li.actionMenuMove > ul li {
     height: 30px;
 }
+
+div.RadWindow.RadWindow_Default table.rwTitlebarControls em {
+    font: normal bold 16px SegoeUI, Arial, Verdana, sans-serif !important;
+    color: #fff;
+    margin-left: 5px;
+    margin-top: -1px;
+}
+
 
 /*------------------------------------------------*/
 /* FORM STYLE
@@ -246,13 +266,7 @@ a.altButton:hover {
 }
 
 #search a.SearchButton:hover {
-    background: url('images/search.png') no-repeat center center, rgb(45,45,45); /* Old browsers */
-    background: url('images/search.png') no-repeat center center, -moz-linear-gradient(top, rgba(45,45,45,1) 0%, rgba(86,86,86,1) 100%); /* FF3.6+ */
-    background: url('images/search.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(45,45,45,1)), color-stop(100%,rgba(86,86,86,1))); /* Chrome,Safari4+ */
-    background: url('images/search.png') no-repeat center center, -webkit-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(86,86,86,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: url('images/search.png') no-repeat center center, -o-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(86,86,86,1) 100%); /* Opera 11.10+ */
-    background: url('images/search.png') no-repeat center center, -ms-linear-gradient(top, rgba(45,45,45,1) 0%,rgba(86,86,86,1) 100%); /* IE10+ */
-    background: url('images/search.png') no-repeat center center, linear-gradient(to bottom, rgba(45,45,45,1) 0%,rgba(86,86,86,1) 100%); /* W3C */
+    background: url('images/search.png') no-repeat center center, rgb(45,45,45); 
 }
 
 #dnn_dnnSearch_txtSearch {
@@ -313,12 +327,21 @@ a.altButton:hover {
     padding: 36px 0 0;
 }
 
+#site-logo {
+    padding-bottom: 0;
+}
+
 #dnn_uxHeader_dnnLOGO_imgLogo {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
+@media (max-width: 768px) {
+    #header {
+        padding: 0;
+    }
+}
 
 @media (max-width: 991px) {
     #dnn_uxHeader_dnnLOGO_imgLogo {
@@ -328,8 +351,6 @@ a.altButton:hover {
 
 }
 
-
-
 /* Language */
 .language .language-object {
     /*float: right;*/
@@ -338,42 +359,42 @@ a.altButton:hover {
     padding: 0;
 }
 
-    .language .language-object span {
-        float: left;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        padding-left: 5px;
-        margin: 0;
-    }
+.language .language-object span {
+    float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    margin: 0;
+}
 
-        .language .language-object span:first-child {
-            padding-left: 8px;
-        }
+.language .language-object span:first-child {
+    padding-left: 8px;
+}
 
-        .language .language-object span img {
-            height: 12px;
-            width: 17px;
-            opacity: 0.3;
-        }
+.language .language-object span img {
+    height: 12px;
+    width: 17px;
+    opacity: 0.3;
+}
 
-        .language .language-object span:hover img {
-            opacity: 1;
-        }
+.language .language-object span:hover img {
+    opacity: 1;
+}
 
-    .language .language-object .Language.selected img {
-        opacity: 1;
-        border-color: #222;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
-        -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
-        box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
-    }
+.language .language-object .Language.selected img {
+    opacity: 1;
+    border-color: #222;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+}
 
 /*------------------------------------------------*/
 /* NAVIGATION */
 /*------------------------------------------------*/
 
-.dropdown:hover .dropdown-menu {
+.navbar-desktop .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
  }
@@ -404,90 +425,29 @@ a.altButton:hover {
 
 
 /*------------------------------------------------*/
+/* BREADCRUMBS */
+/*------------------------------------------------*/
+#breadcrumb {
+    margin: 0;
+}
+
+#breadcrumb a.breadcrumbLink:last-of-type {
+    color: #666;
+}
+
+
+/*------------------------------------------------*/
 /* CONTENT PANES */
 /*------------------------------------------------*/
-.contentPane {
+
+.L0_Home #breadcrumb {
+    display: none;
 }
 
-/* Content Pane - Home */
-/* Removed for Bootstrap
-.leftPane {
-    float: left;
-    width: 630px;
+.row {
+    padding-bottom: 40px;
 }
 
-.sidebarPane {
-    float: right;
-    width: 320px;
-}
-*/
-
-/* Content Pane - 2 columns */
-/* Removed for Bootstrap
-.twoColRightPane {
-    float: right;
-    width: 260px;
-}
-
-.twoColLeftPane {
-    float: left;
-    width: 690px;
-}
-
-.leftPaneLowerLeft {
-    float: left;
-    width: 400px;
-}
-
-.leftPaneLowerRight {
-    float: right;
-    width: 260px;
-}
-    */
-
-/* Content Pane - 3 columns */
-.threeColLeftPane,
-.threeColCenterPane,
-.threeColRightPane {
-    float: left;
-    width: 306px;
-}
-
-/* Content Pane - 3 columns Social */
-.threeColSocialLeftPane {
-    float: left;
-    width: 110px;
-}
-
-.threeColSocialCenterPane {
-    float: left;
-    position: relative;
-    width: 560px;
-}
-
-.threeColSocialRightPane {
-    float: left;
-    width: 250px;
-}
-
-/* Content Pane - Footer */
-
-/* Removed for Bootstrap
-
-.footerPane {
-    float: left;
-    width: 136px;
-}
-
-    .footerPane,
-    .footerPane .Normal {
-        color: #808080;
-    }
-
-.footerPaneRight {
-    float: right;
-}
-*/
 
 /* Empty Panes */
 .DNNEmptyPane {
@@ -495,9 +455,9 @@ a.altButton:hover {
     margin: 0;
 }
 
-    .DNNEmptyPane.rightTwoCol + div {
-        width: 100%;
-    }
+.DNNEmptyPane.rightTwoCol + div {
+    width: 100%;
+}
 
 /* Copyright
     -------------------------------------*/
@@ -507,34 +467,32 @@ a.altButton:hover {
     margin: 25px 0;
 }
 
-    #copyright a:link,
-    #copyright a:visited {
-        font-size: 12px;
-        color: #a6a6a6;
-    }
+#copyright a:link,
+#copyright a:visited {
+    font-size: 12px;
+    color: #a6a6a6;
+}
 
-    #copyright a:hover {
-        color: #D00;
-    }
+#copyright a:hover {
+    color: #D00;
+}
 
-    #copyright a.DNNMobileLink {
-        color: #666;
-        font-weight: bold;
-    }
+#copyright a.DNNMobileLink {
+    color: #666;
+    font-weight: bold;
+}
 
-        #copyright a.DNNMobileLink:hover {
-            color: #D00;
-        }
+#copyright a.DNNMobileLink:hover {
+    color: #D00;
+}
 
-    #copyright .pull-right {
-        text-align:right;
-    }
-
-
+#copyright .pull-right {
+    text-align:right;
+}
 
 /*------------------------------------------------*/
 /* GENERIC CLASSES
-    /*------------------------------------------------*/
+/*------------------------------------------------*/
 
 /* Clear-fix for floated elements 
     -------------------------------------*/

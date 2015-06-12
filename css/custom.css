@@ -1,1 +1,25 @@
-﻿
+.navbar-mobile .nav > li > a.dropdown-toggle {
+	display: inline-block;
+	padding-right: 0;
+	width: 85%;
+}
+
+.navbar-mobile a.dropdown-toggle span.caret {
+	display: none;
+}
+
+.navbar-mobile .nav > li .mobileBtn,
+.navbar-mobile .nav > li span.caret {
+	cursor: pointer;
+}
+
+.navbar-mobile .nav > li .mobileBtn {
+	padding: 10px;
+	display: inline-block;
+}
+
+.navbar-mobile .nav > li span.caret {
+	border-top: 6px dashed;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}

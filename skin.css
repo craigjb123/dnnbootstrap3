@@ -297,6 +297,10 @@ a.altButton:hover {
     box-shadow: inset 0px 3px 8px #999;
 }
 
+.dnnSearchBoxPanel .dnnSearchBox {
+    margin-right: 130px;
+}
+
 @media (max-width: 991px) {
     #search {
         text-align: center;

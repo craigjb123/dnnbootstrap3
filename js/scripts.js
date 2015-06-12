@@ -13,9 +13,9 @@ $(document).ready(function () {
 
     // Mobile Menu - Dropdown toggle 
     
-	$('.navbar-mobile li.dropdown > a.dropdown-toggle').each(function(){$(this).after('<span class="caret"></span>')});
+	$('.navbar-mobile li.dropdown > a.dropdown-toggle').each(function(){$(this).after('<div class="mobileBtn"><span class="caret"></span></div>')});
 
-	$('.navbar-mobile span.caret').on('click',function(e){
+	$('.navbar-mobile .mobileBtn').on('click',function(e){
 		e.stopPropagation();
 		$(this).parent().toggleClass('open');
 	});

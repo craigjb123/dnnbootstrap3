@@ -1,1 +1,8 @@
-﻿
+.navbar-mobile .nav > li > a.dropdown-toggle {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.navbar-mobile a.dropdown-toggle span.caret {
+	display: none;
+}

@@ -36,6 +36,10 @@
   public string SkinPath { get; set; }
 </script>
 
+<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <!-- Custom CSS files -->
 <dnn:DnnCssInclude ID="DnnCssInclude1" runat="server" FilePath="css/custom.css" PathNameAlias="SkinPath" />
 <link rel="stylesheet" href="<%#SkinPath %>css/print.css" type="text/css" media="print" />

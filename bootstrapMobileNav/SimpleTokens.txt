@@ -6,7 +6,7 @@
 	[?ENABLED]
 		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="[=URL]" [?TARGET]target="[=TARGET]"[/?] [?NODE] [/?] >[=TEXT] [?NODE]<span class="caret"></span>[/?]</a>
 	[?ELSE]
-		<a href="#" [?NODE] [/?]>[=TEXT] [?NODE]<span class="caret hidden-desktop pull-right icon-chevron-down icon-white"></span>[/?]</a>
+		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#" [?NODE] [/?]>[=TEXT] [?NODE]<span class="caret"></span>[/?]</a>
 	[/?]
 	[?NODE]
 	    <ul class="dropdown-menu" role="menu">

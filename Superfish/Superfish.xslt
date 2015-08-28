@@ -26,7 +26,18 @@
       <a>
         <xsl:choose>
           <xsl:when test="@enabled = 1">
-            <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
+          <xsl:attribute name="href">
+          <xsl:value-of select="@url"/>
+          </xsl:attribute>
+          <xsl:choose>
+          <xsl:when test="@target != ''">
+          <xsl:attribute name="target">
+          <xsl:value-of select="@target"/>
+          </xsl:attribute>
+          </xsl:when>
+          <xsl:otherwise>
+          </xsl:otherwise>
+          </xsl:choose>
           </xsl:when>
           <xsl:otherwise>
             <xsl:attribute name="href">#</xsl:attribute>
